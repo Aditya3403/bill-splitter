@@ -1,0 +1,15 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bill-splitter-api",
+  "main": "index.ts",
+  "compatibility_date": "2026-11-22",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bill-splitter-db",
+      "database_id": "44bc6542-db6d-4072-9e8d-c354bde11cb9",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

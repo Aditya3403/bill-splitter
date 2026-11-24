@@ -1,0 +1,23 @@
+{
+  "name": "bill-splitter-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "db:migrate": "wrangler d1 migrations apply bill-splitter-db --local",
+    "db:tables": "wrangler d1 execute bill-splitter-db --local --command \"SELECT name FROM sqlite_master WHERE type='table'\"",
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "hono": "^4.0.0",
+    "jose": "^6.2.18"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^4.0.0"
+  }
+}
